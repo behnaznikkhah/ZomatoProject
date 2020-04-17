@@ -29,23 +29,23 @@ Some insights that we observed from the dataset are:
 Below architecture is the data pipeline of this project.
 
 
- ![](screenshots/pipeline.PNG)
+ ![](images/pipeline.PNG)
 ### DATA COLLECTION - ZOMATO API
 
 First step in our project is gathering data from a reliable source. We collected data from Zomato API. Geocodes (longitude and latitude) were collected and a python script was created to iterate over these geocodes to obtain restaurant data. We obtained popularity and nightlife index of the nearby restaurants around the given coordinates.
 
 Model Schema of the collected data is as below:
- ![](screenshots/schema1.PNG)
- ![](screenshots/schema2.PNG)
- ![](screenshots/schema3.PNG)
- ![](screenshots/schema4.PNG)
+ ![](images/schema1.PNG)
+ ![](images/schema2.PNG)
+ ![](images/schema3.PNG)
+ ![](images/schema4.PNG)
 ### MONGO DB
 
 The next step is to store the collected data in a database. We chose the NoSQL database Mongodb for this purpose as it provides high performance and scalability. Also auto replication feature of mongodb leads to high availability. Data was dumped to the DB using the same python program with which we collected the data. A DB called 'Zomato' was created and a collection called 'Restaurant' within it. 
 
 
- ![](screenshots/Screenshot (302).png)
- ![](screenshots/Screenshot (304).png)
+ ![](images/Screenshot (302).png)
+ ![](images/Screenshot (304).png)
 ### SPARK
 
 Once the data was dumped to the Mongodb, the next step was to process the data. Apache Spark, which has in memory cluster computing that increases the speed an application, has been used to process our data. Using a mongo DB connector for Spark, the data has been read from mongodb to the spark environment. Data cleaning and unnecessary columns were dropped and final data frame with all required variables was created for further processing.
