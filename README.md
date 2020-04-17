@@ -44,11 +44,11 @@ Model Schema of the collected data is as below:
 The next step is to store the collected data in a database. We chose the NoSQL database Mongodb for this purpose as it provides high performance and scalability. Also auto replication feature of mongodb leads to high availability. Data was dumped to the DB using the same python program with which we collected the data. A DB called 'Zomato' was created and a collection called 'Restaurant' within it. 
 
 
- ![](images/Screenshot (302).png)   
+ ![](images/Screenshot (304).PNG)   
  
  
  
- ![](images/Screenshot (304).png)
+ ![](images/Screenshot (304).PNG)
 ### SPARK
 
 Once the data was dumped to the Mongodb, the next step was to process the data. Apache Spark, which has in memory cluster computing that increases the speed an application, has been used to process our data. Using a mongo DB connector for Spark, the data has been read from mongodb to the spark environment. Data cleaning and unnecessary columns were dropped and final data frame with all required variables was created for further processing.
