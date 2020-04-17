@@ -60,7 +60,7 @@ The final step is the visualization of our analysis of the restaurant data. We u
 
 ### Contact
 
-Behnaz.nikkhah@gmail.com
-aiswarya.nv4@gmail.com
+Behnaz.nikkhah@gmail.com   
+aiswarya.nv4@gmail.com   
 chitra2nair@gmail.com
 
